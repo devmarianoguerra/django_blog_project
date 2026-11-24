@@ -4,7 +4,7 @@ Proyecto base de un blog web desarrollado con Django.
 
 ## Descripción
 
-Este repositorio contiene la estructura inicial de un proyecto Django para construir un blog. Incluye la configuración base del proyecto y una aplicación llamada `posts`.
+Este repositorio contiene un proyecto Django con una aplicación llamada `posts`. Permite administrar publicaciones mediante operaciones CRUD y asociar imágenes a los posts.
 
 ## Instalación
 
@@ -46,6 +46,12 @@ Instalar dependencias:
 pip install -r requirements.txt
 ```
 
+Aplicar migraciones:
+
+```bash
+python manage.py migrate
+```
+
 Ejecutar el servidor:
 
 ```bash
@@ -56,6 +62,22 @@ Abrir en el navegador:
 
 http://127.0.0.1:8000/
 
+## CRUD de posts
+
+Las publicaciones permiten:
+
+- Listar posts publicados.
+- Ver el detalle de un post.
+- Crear un nuevo post.
+- Editar un post existente.
+- Eliminar un post mediante una confirmación.
+
+## Imágenes
+
+La aplicación usa Pillow para procesar el campo de imagen del modelo `Post`. Las imágenes se guardan en `media/posts/` y se sirven desde `/media/` durante el desarrollo.
+
+Para probar la carga de imágenes, abrir `/posts/crear/`, completar el formulario y seleccionar un archivo de imagen.
+
 ## Aplicaciones
 
-- `posts`: aplicación inicial para manejar las publicaciones del blog.
+- `posts`: aplicación principal para gestionar las publicaciones del blog.
