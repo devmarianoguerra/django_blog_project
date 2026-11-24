@@ -78,6 +78,15 @@ La aplicación usa Pillow para procesar el campo de imagen del modelo `Post`. La
 
 Para probar la carga de imágenes, abrir `/posts/crear/`, completar el formulario y seleccionar un archivo de imagen.
 
+## Usuarios y perfiles
+
+El sitio permite registrar usuarios desde `/accounts/registro/` e iniciar sesión desde `/accounts/login/`. El cierre de sesión está disponible desde el menú y redirige al listado de posts.
+
+Cada usuario tiene un perfil con biografía y avatar. El perfil se puede ver y editar desde `/accounts/perfil/`. Los avatares se guardan en `media/avatares/` y se sirven desde `/media/` durante el desarrollo.
+
+Las vistas de crear, editar y eliminar posts requieren autenticación. El listado y el detalle de posts siguen siendo públicos.
+
 ## Aplicaciones
 
 - `posts`: aplicación principal para gestionar las publicaciones del blog.
+- `accounts`: aplicación para registro, autenticación y perfiles.
